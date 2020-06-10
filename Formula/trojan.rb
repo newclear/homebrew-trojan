@@ -1,9 +1,9 @@
 class Trojan < Formula
   desc "Unidentifiable mechanism that helps you bypass GFW"
   homepage "https://trojan-gfw.github.io/trojan/"
-  version "1.15.1"
-  url "https://github.com/trojan-gfw/trojan/archive/v1.15.1.tar.gz"
-  sha256 "ab5ed59573085e69164dce677656951d502ee6cdf0890137f6868da7af3c0ffd"
+  version "1.16.0"
+  url "https://github.com/trojan-gfw/trojan/archive/v1.16.0.tar.gz"
+  sha256 "86cdb2685bb03a63b62ce06545c41189952f1ec4a0cd9147450312ed70956cbc"
   depends_on "cmake" => :build
   depends_on "coreutils" => :test
   depends_on "python" => :test
@@ -43,8 +43,8 @@ class Trojan < Formula
 
   test do
     resource "test" do
-      url "https://github.com/trojan-gfw/trojan/archive/v1.15.1.tar.gz"
-      sha256 "ab5ed59573085e69164dce677656951d502ee6cdf0890137f6868da7af3c0ffd"
+      url "https://github.com/trojan-gfw/trojan/archive/v1.16.0.tar.gz"
+      sha256 "86cdb2685bb03a63b62ce06545c41189952f1ec4a0cd9147450312ed70956cbc"
     end
     resource("test").stage do
       inreplace "tests/LinuxSmokeTest/basic.sh", "openssl", "/usr/local/opt/openssl@1.1/bin/openssl"
